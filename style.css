@@ -1,0 +1,63 @@
+body
+{
+    margin: 0;
+    background-color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input
+{
+    width: auto;
+    margin-top: 10px;
+    color: rgb(114, 174, 253);
+    background-color: white;
+    border: 2px solid rgb(114, 174, 253);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+input:hover
+{
+    background-color: rgb(198, 219, 248);
+}
+
+#container
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    position: relative;
+}
+
+#logo
+{
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    background-color: rgb(114, 174, 253);
+}
+
+#content
+{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding-bottom:30px;
+}
+
+#footer
+{
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(114, 174, 253);
+}

@@ -1,0 +1,121 @@
+body
+{
+    margin: 0;
+    background-color: rgb(171, 206, 252);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container
+{
+    width: 100%;
+    height: 100%;
+}
+
+#logo
+{
+    height: 100px;
+}
+
+#logoR
+{
+    float: left;
+    background-color: white;
+    width: 50%;
+    height: 100px;
+}
+
+#logoL
+{
+    float: left;
+    background-color: rgb(114, 174, 253);
+    width: 50%;
+    height: 100px;
+}
+
+#topbar
+{
+    width: 100%;
+    height: 550px;
+    text-align: center;
+}
+
+#topbarR
+{
+    float: right;
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: rgb(114, 174, 253);
+}
+
+#topbarL
+{
+    float: left;
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: white;
+}
+
+#content
+{
+    background-color: white;
+    color: rgb(114, 174, 253);
+    text-align: center;
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    top: 250px;
+    left: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input
+{
+    width: 200px;
+    margin-top: 10px;
+    color: rgb(114, 174, 253);
+    background-color: white;
+    border: 2px solid rgb(114, 174, 253);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+
+#footer
+{
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+}
+
+#footerL
+{
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 50%;
+    background-color: white;
+}
+
+#footerR
+{
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100px;
+    width: 50%;
+    background-color: rgb(114, 174, 253);
+}
