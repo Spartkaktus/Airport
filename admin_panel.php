@@ -62,7 +62,7 @@ if (isset($_SESSION['user_id'])) {
                 Wybierz użytkownika do usunięcia:
                 <select name="selected_user">
                     <?php
-                    $select_employee_query = "SELECT Login FROM users WHERE `Level_of_access`='Employee' OR `Level_of_access`='Admin'";
+                    $select_employee_query = "SELECT Login FROM users WHERE `Level_of_access`='Customer'";
                     $employee_result = mysqli_query($conn, $select_employee_query);
 
                     while ($employee_row = mysqli_fetch_assoc($employee_result)) {
@@ -136,32 +136,13 @@ if (isset($_SESSION['user_id'])) {
         }
         ?>
     </select><br><br>
-    <input type="submit" name="usun" value="usuń">
+    <input type="submit" name="usun" value="usun">
             </form>
-<form method="post" action="edit_flight.php">
-    Wybierz lot którego status chcesz zmienić:
-    <select name="selected_flight">
-        <?php
-        $select_flight_query = "SELECT Flight_id FROM flights";
-        $flight_result = mysqli_query($conn, $select_flight_query);
 
-        while ($flight_row = mysqli_fetch_assoc($flight_result)) {
-            echo "<option value='" . $flight_row['Flight_id'] . "'>" . $flight_row['Flight_id'] . "</option>";
-        }
-        ?>
-    </select><br><br>
-
-    Zmień status: <select name="new_status">
-        <option value="finished">zakończony</option>
-        <option value="delayed">opóźniony</option>
-        <option value="scheduled">zaplanowany</option>
-        <option value="cancelled">anulowany</option>
-        <option value="ongoing">w trakcie</option>
-    </select><br>
-
-    <input type="submit" value="zapisz zmiany"><br><br>
             <?php
             // Additional content for administrators
+
+            echo '<form method="post" action="log_form.php"><input type="submit" value="Wróć do logowania"></form>';
             
         } elseif ($user_role === "Employee") {
             // Content visible for employees
@@ -200,7 +181,7 @@ if (isset($_SESSION['user_id'])) {
     Zmień status: <select name="new_status">
         <option value="finished">zakończony</option>
         <option value="delayed">opóźniony</option>
-        <option value="scheduled">zaplanowany</option>
+        <option value="pending">oczekujący</option>
         <option value="cancelled">anulowany</option>
         <option value="ongoing">w trakcie</option>
     </select><br>
@@ -214,6 +195,7 @@ if (isset($_SESSION['user_id'])) {
 
             <?php
             // Additional content for employees
+            echo '<form method="post" action="log_form.php"><input type="submit" value="Wróć do logowania"></form>';
         }
     } else {
         echo "User role not found!";
