@@ -42,7 +42,7 @@ session_start();
 
 	<form action="logowanie.php" method="POST">
 			login </br> <input type="text" name="login" required> </br>
-			hasło </br> <input type="text" name="password" required></br>
+			hasło </br> <input type="password" name="password" required></br>
 			<input type="checkbox" name="remember"/>Zapamiętaj mnie </br>
 			<input type="submit" value="zaloguj"/></br>
 	</form>
